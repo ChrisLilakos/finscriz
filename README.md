@@ -1,0 +1,2 @@
+# finscriz
+finviz scraping
