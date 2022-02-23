@@ -3,7 +3,7 @@
 try:  # imports
     from pathlib import Path as path
     # from pyhelpers.ops import is_downloadable  # results in this warning:
-        # C:\Users\chris\AppData\Local\Programs\Python\Python39\lib\site-packages\fuzzywuzzy\fuzz.py:11:
+        # C:\Users\*****\AppData\Local\Programs\Python\Python39\lib\site-packages\fuzzywuzzy\fuzz.py:11:
         # UserWarning: Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning
         # warnings.warn('Using slow pure-python SequenceMatcher. Install python-Levenshtein to remove this warning')
             # error arose when i did "pip install python-Levenshtein" in the cmd
@@ -32,9 +32,9 @@ try:  # imports
         components.reverse()
         return '/%s' % '/'.join(components)
     # '# MNE!*' = may have to edit on your end
-    browser = webdriver.Edge(executable_path=r"C:\Users\chris\OneDrive\Desktop\edgedriver_win64\msedgedriver.exe")  #MNE
+    browser = webdriver.Edge(executable_path=r"C:\Users\*****\OneDrive\Desktop\edgedriver_win64\msedgedriver.exe")  #MNE
         # "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe"
-        # r"C:\Users\chris\OneDrive\Desktop\edgedriver_win64\msedgedriver.exe"
+        # r"C:\Users\*****\OneDrive\Desktop\edgedriver_win64\msedgedriver.exe"
     wait, cnt, todayte, finLink = WebDriverWait(browser, 1), 0, datetime.datetime.today().date(), \
                           "https://finviz.com/screener.ashx?v=152&f=sh_relvol_o3&ft=4&o=-relativevolume&c=0,1,2,64,65"
 # logging in
@@ -81,7 +81,7 @@ try:  # imports
     browser.find_element_by_link_text("export").click()
     time.sleep(2)  # wait for file to download
     destinPath = path(path.cwd() / f'finvizCSV{todayte}.csv')  # MNE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    shutil.move(path(r"C:\Users\chris\OneDrive\Downloads\finviz.csv"), destinPath)  # MNE!!!!!!!!!!!!!!!!!!!!!!!!!!
+    shutil.move(path(r"C:\Users\*****\OneDrive\Downloads\finviz.csv"), destinPath)  # MNE!!!!!!!!!!!!!!!!!!!!!!!!!!
 # emailing the csv
     browser.minimize_window()
     sender, senderAccss, recvr = 'c*******st@gmail.com', input("gm access\n"), 'c*******st@gmail.com'  # MNE!!!!!!!!!
@@ -143,12 +143,12 @@ try:  # imports
     if input("type something in then press enter to close browser\n"):  # MNE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         browser.close()
 except Exception as err:  # text somebody if an exception be up
-    twilioGoDir = path(r'C:\Users\chris\OneDrive\profile links\PycharmProjectsLink\pythonProject')
+    twilioGoDir = path(r'C:\Users\*****\OneDrive\profile links\PycharmProjectsLink\pythonProject')
     # sys.path.append(str(twilioGoDir))
     # import twilio_go
     # from twilio.rest import Client  # correct way to access twilio mod
     # accountSID, authToken, myCellNum, myTwilioNum = \
-    #     'AC26eedxxxxxxxx....', '530abcxxxxxxxx....', '3475673868', '+14632223597'  # MNE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    #     'AC26eedxxxxxxxx....', '530abcxxxxxxxx....', '34756****8', '+146322****7'  # MNE!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     # twilioMyGetIn = Client(accountSID, authToken)
     # message = twilioMyGetIn.messages.create(body=f"error with the code:\n\n{err}", from_=myTwilioNum, to=myCellNum)
     # sid = message.sid
@@ -206,7 +206,7 @@ except Exception as err:  # text somebody if an exception be up
 #         return '/%s' % '/'.join(components)
 #     # '# MNE!*' = may have to edit on the pythonAnywhere end. X-MNE-X = pythonAnywhere editing done
 
-#     chrome_options, cwdP = Options(), "/home/JimboDF/finscriz//"  # webdriver.ChromeOptions(), path.cwd()
+#     chrome_options, cwdP = Options(), "/home/Ji****F/finscriz//"  # webdriver.ChromeOptions(), path.cwd()
 #     chromeOptArgLis = ["--headless", "--disable-gpu", "window-size=1536,934", # '--log-path=chromedriver.log', '--kiosk-printing',
 #     "--no-sandbox", "--disable-extensions", '--disable-setuid-sandbox',  '--verbose', '--disable-popup-blocking',
 #     '--disable-dev-shm-usage', '--disable-software-rasterizer', "--disable-notifications"]
@@ -302,7 +302,7 @@ except Exception as err:  # text somebody if an exception be up
 #     shutil.move(path(cwdP + "finviz.csv"), destinPath)  # bulk comments line 143
 # # emailing the csv
 #     browser.minimize_window()
-#     sender, senderAccss, recvr = 'c*******st@gmail.com', pwords.chrigslist_password, 'c*****is**@yahoo.com'
+#     sender, senderAccss, recvr = 'c*******st@gmail.com', pwords.c*******st_password, 'c*****is**@yahoo.com'
 #     finvMailSubj, outgFile, addtnlTxt = f'finviz csv {todayte}', destinPath, 'sup\n'  # change the body here if need be
 #     def emailSend(senderIM, senderPC, sendee, subject, bodyAsTxt='', attchmnt=''):
 #         # there's a way to format/send the body(bodyAsTxt/addtnlTxt) as/in html. its not shown/needed (rn/here) tho.
@@ -344,11 +344,11 @@ except Exception as err:  # text somebody if an exception be up
 #         sys.exit()
 #     def twilioRun(errr):
 #         from twilio.rest import Client  # correct way to access twilio mod
-#         chrisLCell, CMLsTwilioNum = '3475673868', '+14632223597'  # X-MNE-X
+#         c*****Cell, CMLsTwilioNum = '3475*****8', '+146322****7'  # X-MNE-X
 #         twilioMyGetIn = Client(pwords.CMLtwilio_sid, pwords.CMLtwilio_token)  # X-MNE-X
 #         fullErr = f"""at {datetime.datetime.now()} an error occurred:\n\n \tError Traceback (last 700 characters):
 #         \t\t{traceback.format_exc()[-700:]}\n\n Error: {errr}"""
-#         message = twilioMyGetIn.messages.create(body=f"error with the code:\n\n{fullErr}", from_=CMLsTwilioNum, to=chrisLCell)
+#         message = twilioMyGetIn.messages.create(body=f"error with the code:\n\n{fullErr}", from_=CMLsTwilioNum, to=c*****Cell)
 #         sid = message.sid
 #         time.sleep(15)  # wait a few seconds to see if the msg sent
 #         print(twilioMyGetIn.messages(sid).fetch().status)  # if dis don't werk eider, den I.D.K. What.
@@ -369,7 +369,7 @@ except Exception as err:  # text somebody if an exception be up
 #     # line 58 - browser = uc.Chrome(options=chrome_options):
 #             # , service_args=["--log-path=./Logs/DubiousDan.log"]
 #         # , executable_path=
-#                 # r"/home/JimboDF/.local/bin:/home/JimboDF/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:."
+#                 # r"/home/J*****F/.local/bin:/home/J*****F/.local/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:."
 #           # downloaded chromedriver file for old chromeDriver version 78.0.3904.70 since this is the current browser version for pyAnyW
 #             # alt to ^ would be to find out how to update browser version on pythonanywhere
 #     # line 131 - browser.find_element(byy.LINK_TEXT, 'export').click():
@@ -383,7 +383,7 @@ except Exception as err:  # text somebody if an exception be up
 #         # see where the download ended up after this click (if anywhere. is there a
 #         # default directory setting for downloads? yes, and code has been edited accordingly)
 #     # line 143 - shutil.move(path(cwdP / "finviz.csv"), destinPath):
-#         # shutil.move(path(r"C:\Users\chris\OneDrive\Downloads\finviz.csv"), destinPath)
+#         # shutil.move(path(r"C:\Users\*****\OneDrive\Downloads\finviz.csv"), destinPath)
 #             # made dis dir da default dir for downloads earlier in the code. shutil kept to change the name of the file tho
 #             # make the source path for shutil where the csv will be when export is clicked
 #     # section final touches:
@@ -393,7 +393,7 @@ except Exception as err:  # text somebody if an exception be up
 #             # browser.close()  # maybe move to the finally clause? no cuz this is just to close the current browser window
 #         # raise Exception("Mock Error")
 #     # under line 183 exception:
-#         # twilioGoDir = path(r'C:\Users\chris\OneDrive\profile links\PycharmProjectsLink\pythonProject')
+#         # twilioGoDir = path(r'C:\Users\*****\OneDrive\profile links\PycharmProjectsLink\pythonProject')
 #         # sys.path.append(str(twilioGoDir))
 #         # import twilio_go
 #         # print("yeoooo\n\n", traceback.format_exc(), err, datetime.datetime.now(), sep="\n")  # testing print
@@ -430,9 +430,9 @@ except Exception as err:  # text somebody if an exception be up
 #         #                 break
 #         #     finvColEdit(colTitleLis)
 #     # line 60 or 61 - chrome_options.add_experimental_option('useAutomationExtension', False) &
-#         # browser = uc.Chrome(options=chrome_options)  # "home/JimboDF/finscriz/chromedriver", # bulk comments line 58
+#         # browser = uc.Chrome(options=chrome_options)  # "home/J*****F/finscriz/chromedriver", # bulk comments line 58
 #      # :
-#         # browser = webdriver.Edge(executable_path=r"C:\Users\chris\OneDrive\Desktop\edgedriver_win64\msedgedriver.exe")
+#         # browser = webdriver.Edge(executable_path=r"C:\Users\*****\OneDrive\Desktop\edgedriver_win64\msedgedriver.exe")
 #         # # print ("Headless Chrome Initialized")
 #         # potential other answers for python selenium headless download:
 #             # https://bugs.chromium.org/p/chromedriver/issues/detail?id= 2454, 3120, 3548
